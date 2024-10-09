@@ -1,0 +1,5 @@
+Super user
+
+Name: Pedro
+E-mail: nnmspedro@gmail.com
+pass: admin

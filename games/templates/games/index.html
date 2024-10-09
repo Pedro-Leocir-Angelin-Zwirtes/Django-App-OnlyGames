@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+        
+<div class="jumbotron">
+    <h1 class="display-4 mt-3">OnlyGames</h1>
+    <p class="lead">Informação sobre diversos games para pc, mobile e console</p>
+    <hr class="my-4">
+    <p>Use o botão abaixo para acessar a lista de jogos</p>
+    <a class="btn btn-dark btn-lg" href="{% url 'lista' %}" role="button">Confira os jogos</a>
+</div>
+
+{% endblock %}

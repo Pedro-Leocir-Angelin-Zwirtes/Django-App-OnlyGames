@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block title %}Jogos{% endblock %}
+
+{% block content %}
+
+<div class="jumbotron">
+    <h1 class="display-4 mt-3">Lista de Jogos</h1>
+    <p class="lead">Abaixo você encontrará a lista de diversos jogos.</p>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr class="table-dark">
+          <th scope="col">Nome</th>
+          <th scope="col">Data Criação</th>
+          <th scope="col">Data Modificação</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for jogo in jogos %}
+        <tr>
+            <td>{{ jogo.nome}}</td>
+            <td>{{ jogo.data_criacao}}</td>
+            <td>{{ jogo.data_modificacao}}</td>
+            <td>
+              <a class="btn btn-dark" href="{% url 'detalhe' jogo.id %}">Ler Informações</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+
+{% endblock %}
